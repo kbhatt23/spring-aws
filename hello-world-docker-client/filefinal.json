@@ -1,0 +1,38 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "hello-world-docker",
+      "image": "kbhatt23/hello-beanstalk-docker:0.0.1",
+      "essential": true,
+      "memory": 256,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 5000
+        }
+      ]
+    },
+    {
+      "name": "hello-world-docker-client",
+      "image": "kbhatt23/hello-beanstalk-docker-client:0.0.1",
+      "environment": [
+        {
+          "name": "HELLO_WORLD_HOST",
+          "value": "hello-world-docker"
+        }
+      ],
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 5001,
+          "containerPort": 5001
+        }
+      ],
+      "links": [
+        "hello-world-docker"
+      ]
+    }
+  ]
+}

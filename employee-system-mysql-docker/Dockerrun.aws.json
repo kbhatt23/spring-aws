@@ -1,7 +1,7 @@
 {
 	"AWSEBDockerrunVersion": "1",
 	"Image": {
-		"Name": "kbhatt23/employee-system-mysql-docker:0.0.2t",
+		"Name": "kbhatt23/employee-system-mysql-docker:0.0.2",
 		"Update": "true"
 	},
 	"Ports": [

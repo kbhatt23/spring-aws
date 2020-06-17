@@ -1,0 +1,24 @@
+version: "3"
+services:
+ hello-world-docker:
+    image: "kbhatt23/hello-beanstalk-docker:0.0.1"
+    container_name: "hello-world-docker"
+    ports:
+      - "5000:5000"
+    networks:
+      - interservice-network
+
+ hello-world-docker-client:
+    image: "kbhatt23/hello-beanstalk-docker-client:0.0.1"
+    container_name: "hello-world-docker-client"
+    depends_on:
+      - hello-world-docker
+    environment:
+      HELLO_WORLD_HOST: hello-world-docker
+    ports:
+      - "5001:5001"
+    networks:
+      - interservice-network
+
+networks:
+  interservice-network: 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.learning.aws.beanstalk</groupId>
-	<artifactId>hello-world</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
-	<name>hello-world</name>
+	<artifactId>hello-world-eb-cli</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>hello-world-eb-cli</name>
 	<description>Demo spring boot project for AWS beanstalk</description>
 
 	<properties>

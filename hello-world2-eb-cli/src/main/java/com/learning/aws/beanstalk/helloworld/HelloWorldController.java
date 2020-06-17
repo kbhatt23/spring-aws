@@ -13,7 +13,7 @@ public class HelloWorldController {
 	@GetMapping("/hello-world")
 	public String helloWorld() {
 		logger.info("helloWorld():hello-world API called");
-		return "hello world and jay shree ram from version 3";
+		return "hello world says rama duta hanuman";
 	}
 
 	@GetMapping("/hello-world-bean")
